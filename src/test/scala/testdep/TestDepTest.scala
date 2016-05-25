@@ -25,7 +25,9 @@ import org.scalatest.junit.JUnitRunner
 class TestDepTest extends FunSuite with ShouldMatchers {
   
   test("Simple test") {
-    TestDep.getMessage() should include ("release")
+    val msg = TestDep.getMessage()
+    msg should include ("release")
+    info(s"message: $msg")
     info("Test done")
   }
   
