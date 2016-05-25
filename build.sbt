@@ -1,4 +1,4 @@
-name := "test-project"
+name := "test-dep"
 
 version := "0.1-SNAPSHOT"
 
