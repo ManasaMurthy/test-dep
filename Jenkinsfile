@@ -8,5 +8,8 @@ node {
   stage 'Publish-Local'
   sh "${SBT} publish-local"
 
+  stage 'Archive'
+  archive 'target/**/test-dep*.jar'
+
 }
 
