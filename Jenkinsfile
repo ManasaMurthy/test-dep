@@ -1,11 +1,12 @@
 node {
   def sbtHome = tool 'default-sbt'
-  env.PATH = "${sbtHome}/bin:${env.PATH}"
+  def SBT = "${sbtHome}/bin/sbt -Dsbt.log.noformat=true -Dsbt.override.build.repos=true"
 
   stage 'Build'
-  sh 'sbt package'
+  sh "${SBT} package"
 
   stage 'Publish-Local'
-  sh 'sbt publish-local'
+  sh "${SBT} publish-local"
+
 }
 
