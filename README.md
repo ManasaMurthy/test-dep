@@ -1,4 +1,3 @@
-# Hello test-dep project
-more comments
-an other one
-demo
+# test-dep project
+A fake scala library built using sbt
+
