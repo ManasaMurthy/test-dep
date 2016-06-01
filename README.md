@@ -1,7 +1,8 @@
 # test-dep project
 A fake scala library built using sbt
 
-with featureX
-
-with featureX
-
+```
+sbt test
+sbt run
+sbt publish-local
+```
