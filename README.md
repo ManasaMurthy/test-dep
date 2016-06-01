@@ -3,3 +3,5 @@ A fake scala library built using sbt
 
 with featureX
 
+with featureX
+
