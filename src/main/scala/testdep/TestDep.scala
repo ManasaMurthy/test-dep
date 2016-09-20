@@ -18,5 +18,5 @@ package testdep
 
 object TestDep {
   import MetaInfo._
-  def getMessage() = s"$project release $version built on $buildDate !"
+  def getMessage() = s"$project release $version built on $hostname at $buildDate !"
 }
