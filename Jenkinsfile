@@ -5,17 +5,26 @@ node {
 
   checkout scm
 
-  stage 'Cleanup'
-  sh "${SBT} clean"
+  stage('Cleanup') {
+    sh "${SBT} clean"
+  }
 
-  stage 'Build'
-  sh "${SBT} package"
+  stage('Build') {
+    sh "${SBT} package"
+  }
 
-  stage 'Publish-Local'
+  stage('Publish-Local') {
   sh "${SBT} publish-local"
+  }
 
-  stage 'Archive'
+  stage('Archive') {
   archive 'target/**/test-dep*.jar'
+  }
+
+  stage('trigger dep') {
+    build 'test-web-project'
+  }
+
 
 }
 
