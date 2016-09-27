@@ -3,6 +3,10 @@ node {
   //def SBT = "${sbtHome}/bin/sbt -Dsbt.log.noformat=true -Dsbt.override.build.repos=true"
   def SBT = "${sbtHome}/bin/sbt -Dsbt.log.noformat=true"
 
+  def branch = env.BRANCH_NAME
+
+  echo "current branch is ${branch}"
+
   checkout scm
 
   stage('Cleanup') {
