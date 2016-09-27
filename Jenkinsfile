@@ -14,17 +14,12 @@ node {
   }
 
   stage('Publish-Local') {
-  sh "${SBT} publish-local"
+    sh "${SBT} publish-local"
   }
 
   stage('Archive') {
-  archive 'target/**/test-dep*.jar'
+    archive 'target/**/test-dep*.jar'
   }
-
-  stage('trigger dep') {
-    build 'test-web-project'
-  }
-
 
 }
 
