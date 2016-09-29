@@ -1,3 +1,5 @@
+#!groovy
+
 node {
   def sbtHome = tool 'default-sbt'
   //def SBT = "${sbtHome}/bin/sbt -Dsbt.log.noformat=true -Dsbt.override.build.repos=true"
@@ -7,6 +9,7 @@ node {
 
   echo "current branch is ${branch}"
 
+  // Mandatory, to maintain branch integrity
   checkout scm
 
   stage('Cleanup') {
