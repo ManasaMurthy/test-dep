@@ -1,6 +1,6 @@
 name := "test-dep"
 
-organization := "testdep"
+organization := "dummy.test"
 
 version := "0.2-SNAPSHOT"
 
@@ -31,4 +31,5 @@ sourceGenerators in Compile <+=
     |""".stripMargin.format(version, projectname, buildDate, hostname) )
   Seq(file)
 }
+
 
