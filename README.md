@@ -13,4 +13,4 @@ sbt publish-local
 
 ## Nothing
 
-caonfxlict
+this conflict is resolved
