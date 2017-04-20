@@ -12,4 +12,4 @@ sbt publish-local
 ```
 
 ## Nothing
-
+conflict
