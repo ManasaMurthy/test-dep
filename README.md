@@ -13,3 +13,4 @@ sbt publish-local
 
 ## Nothing
 
+caonfxlict
